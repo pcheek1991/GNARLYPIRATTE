@@ -1,0 +1,33 @@
+{
+  "name": "windy-plugin-gnarlypiratte",
+  "version": "0.1.0",
+  "description": "GNARLYPIRATTE weather panel starter for Windy",
+  "private": true,
+  "type": "module",
+  "main": "dist/plugin.min.js",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "rollup -w -c",
+    "check": "tsc --noEmit --project tsconfig.json",
+    "preview": "node scripts/preview-server.mjs",
+    "test": "node --test tests/weather.test.mjs"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@windycom/plugin-devtools": "3.0.4"
+  },
+  "overrides": {
+    "minimatch@^9.0.0": "9.0.9",
+    "@rollup/plugin-terser": {
+      "serialize-javascript": "7.1.2"
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "url": "https://github.com/pcheek1991/GNARLYPIRATTE.git",
+    "type": "git"
+  },
+  "homepage": "https://github.com/pcheek1991/GNARLYPIRATTE#readme"
+}
