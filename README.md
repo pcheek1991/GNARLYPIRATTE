@@ -1,12 +1,33 @@
 # GNARLYPIRATTE
 
-An open-source Windy weather-panel prototype, with a shared panel that also runs in a
+An open-source Windy weather panel, with a shared panel that also runs in a
 standalone local preview. Original GNARLYPIRATTE code is MIT licensed. Weather
 data, Windy services, and dependencies retain their own terms and attribution.
 
 Source: [pcheek1991/GNARLYPIRATTE](https://github.com/pcheek1991/GNARLYPIRATTE). The panel footer links to this repository.
 
 ![Standalone preview](preview-desktop.png)
+
+## Install in Windy
+
+1. Open the [latest GitHub release](https://github.com/pcheek1991/GNARLYPIRATTE/releases/latest)
+   and copy its `windy-plugins.com` installation URL.
+2. Sign in to [Windy](https://www.windy.com/plugins), open **Windy Plugins**,
+   and choose **Load plugin directly from URL**.
+3. Paste the URL and use Windy's installation control. Until gallery review
+   is approved, Windy labels a directly installed plugin as untrusted.
+4. Open **GNARLYPIRATTE** from Windy's main menu.
+
+Desktop Windy installation, opening the panel and retrieval of all three
+forecasts were exercised with release 0.1.0. Version 0.1.1 corrects the panel
+badge, prevents Windy's global heading colors from reducing text contrast,
+and includes a gallery screenshot. Gallery listing requires Windy's review
+and approval in addition to a successful upload.
+
+![Chart running inside Windy](src/screenshot.png)
+
+This gallery screenshot was captured from 0.1.0 before the 0.1.1 copy and
+heading-color refinements. Its forecast values are from that capture.
 
 ## What the panel does
 

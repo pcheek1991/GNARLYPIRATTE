@@ -2,7 +2,7 @@ import type { ExternalPluginConfig } from '@windy/interfaces';
 
 const config: ExternalPluginConfig = {
     name: 'windy-plugin-gnarlypiratte',
-    version: '0.1.0',
+    version: '0.1.1',
     title: 'GNARLYPIRATTE',
     icon: '🏴‍☠️',
     description: 'A weather panel for the map center or a point you choose.',

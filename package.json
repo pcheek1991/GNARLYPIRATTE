@@ -1,6 +1,6 @@
 {
   "name": "windy-plugin-gnarlypiratte",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "GNARLYPIRATTE weather panel starter for Windy",
   "private": true,
   "type": "module",
