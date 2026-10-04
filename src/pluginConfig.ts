@@ -15,7 +15,7 @@ const config: ExternalPluginConfig = {
     routerPath: '/gnarlypiratte/:lat?/:lon?',
     addToContextmenu: true,
     listenToSingleclick: true,
-    private: true,
+    private: false,
 };
 
 export default config;

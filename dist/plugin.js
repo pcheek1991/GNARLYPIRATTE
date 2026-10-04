@@ -13,9 +13,9 @@ const __pluginConfig =  {
   "routerPath": "/gnarlypiratte/:lat?/:lon?",
   "addToContextmenu": true,
   "listenToSingleclick": true,
-  "private": true,
-  "built": 1791075393775,
-  "builtReadable": "2026-10-04T00:56:33.775Z"
+  "private": false,
+  "built": 1791084964877,
+  "builtReadable": "2026-10-04T03:36:04.877Z"
 };
 
 // transformCode: import bcast from '@windy/broadcast';

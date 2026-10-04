@@ -97,8 +97,34 @@ It uses Svelte lifecycle hooks and Windy's documented client modules:
   The listener, shared stylesheet, and panel are cleaned up when it closes.
 - [`@windy/location`](https://docs.windy-plugins.com/api/modules/location.html)
   updates the plugin route when the user chooses another point.
-- The config sets `private: true`. No publication, account setup, user-account
-  access, or installation in Windy was performed to produce this starter.
+- The config sets `private: false`, making this release eligible for Windy's
+  public-gallery review. Uploading a plugin and approval for the gallery are
+  separate steps; the public flag does not establish approval.
+
+## Publish a Windy release
+
+The manually triggered [publish-plugin workflow](https://github.com/pcheek1991/GNARLYPIRATTE/actions/workflows/publish-plugin.yml)
+follows [Windy's official publication instructions](https://docs.windy-plugins.com/getting-started/publishing-plugin.html).
+Configure the repository's encrypted Actions secret `WINDY_API_KEY` with a
+Windy **Plugins API** key. This key authorizes publishing; forecast retrieval
+continues to use Open-Meteo without an API key. Never put a publishing key in
+source files, release archives, or public logs.
+
+Run **publish-plugin** from the Actions page for the desired branch. It checks
+out that exact commit, installs locked dependencies, runs the weather tests
+and configuration check, then builds the distribution. It adds repository
+and commit provenance to the manifest, packages the distribution and license
+notices, and creates a draft GitHub release. After upload, it verifies the
+returned `windy-plugins.com` installation URL and compares the served
+minified file with the uploaded build. The verified URL appears in the
+workflow summary and the published GitHub release.
+
+Each published Windy version is immutable. For a later release, increase the
+version in both `package.json` and `src/pluginConfig.ts`, update the lockfile,
+and run the workflow again. Existing release tags are not overwritten. If an
+upload or verification fails, inspect the workflow and draft release before
+retrying, because the upload may already have succeeded. Public gallery
+listing additionally requires review and approval by Windy.
 
 ## Build and local development
 
